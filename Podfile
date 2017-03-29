@@ -13,5 +13,6 @@ target 'Viper' do
   end
 
   pod 'Alamofire', '~> 4.4'
+  pod 'AlamofireObjectMapper', '~> 4.0'
 
 end

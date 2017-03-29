@@ -9,6 +9,7 @@
 import Foundation
 
 import Alamofire
+//https://github.com/Alamofire/Alamofire
 
 class Request {
     
