@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Viper/TableViewController.swift"
-            timestampString = "512468064.692575"
+            timestampString = "512480817.076713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "setListWithObjects(_:)"
             landmarkType = "7">
          </BreakpointContent>

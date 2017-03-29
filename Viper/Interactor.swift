@@ -12,9 +12,11 @@ class Interactor {
     
     var presenter:Presenter?
     let dataBase:DataBase?
+    let request:Request = Request()
     
     init() {
         dataBase = DataBase()
+        request.getData()
     }
     
     func addNewPersonWithData(_ name:String, surname:String) {
@@ -23,12 +25,10 @@ class Interactor {
             persona.nombre = name
             persona.apellido = surname
             
-            if (dataBase?.personas) != nil {
-                dataBase?.personas?.append(persona)
-            }else{
+            if (dataBase?.personas) == nil {
                 dataBase?.personas = [Persona]()
-                dataBase?.personas?.append(persona)
             }
+            dataBase?.personas?.append(persona)
             
             updateList()
         }

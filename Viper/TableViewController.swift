@@ -19,13 +19,7 @@ class TableViewController: UITableViewController, viewProtocol{
         let addItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addNewObject))
         navigationItem.rightBarButtonItem = addItem
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-   
     func addNewObject() {
         presenter!.addNewObject()
     }
@@ -46,7 +40,7 @@ class TableViewController: UITableViewController, viewProtocol{
     
     func setListWithObjects(_ objects: [String]) {
         self.objects = objects
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
 
 }

@@ -29,7 +29,7 @@ class Routing {
     func openAddView() {
         let storyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let addVC:ViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        addVC.presenter = self.presenter
+        addVC.presenter = presenter
         
         vc.present(addVC, animated: true, completion: nil)
     }
