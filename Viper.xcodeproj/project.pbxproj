@@ -19,11 +19,13 @@
 		4935504B1E8B8F6F002C6CA2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935504A1E8B8F6F002C6CA2 /* View.swift */; };
 		4935504D1E8B9134002C6CA2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935504C1E8B9133002C6CA2 /* TableViewController.swift */; };
 		493550511E8BA74C002C6CA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550501E8BA74C002C6CA2 /* ViewController.swift */; };
-		493550531E8BAB22002C6CA2 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550521E8BAB22002C6CA2 /* Database.swift */; };
 		4935505B1E8BE3AC002C6CA2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935505A1E8BE3AC002C6CA2 /* Request.swift */; };
 		4935505E1E8BFADD002C6CA2 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935505D1E8BFADD002C6CA2 /* Conditions.swift */; };
 		493550601E8BFFF3002C6CA2 /* Astronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935505F1E8BFFF3002C6CA2 /* Astronomy.swift */; };
 		493550621E8C0137002C6CA2 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550611E8C0137002C6CA2 /* Forecast.swift */; };
+		493550691E8D04AB002C6CA2 /* ConditionsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550681E8D04AB002C6CA2 /* ConditionsMapper.swift */; };
+		4935506F1E8D22BA002C6CA2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935506E1E8D22BA002C6CA2 /* Extensions.swift */; };
+		495070951E8E2BE40068AECF /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495070941E8E2BE40068AECF /* Mapper.swift */; };
 		E982FBFBAE29C5207972ACC7 /* Pods_Viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E23A1E86ACB9CFA981EF7B0 /* Pods_Viper.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,11 +56,13 @@
 		4935504A1E8B8F6F002C6CA2 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		4935504C1E8B9133002C6CA2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		493550501E8BA74C002C6CA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		493550521E8BAB22002C6CA2 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		4935505A1E8BE3AC002C6CA2 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		4935505D1E8BFADD002C6CA2 /* Conditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
 		4935505F1E8BFFF3002C6CA2 /* Astronomy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Astronomy.swift; sourceTree = "<group>"; };
 		493550611E8C0137002C6CA2 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		493550681E8D04AB002C6CA2 /* ConditionsMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionsMapper.swift; sourceTree = "<group>"; };
+		4935506E1E8D22BA002C6CA2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		495070941E8E2BE40068AECF /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		5E23A1E86ACB9CFA981EF7B0 /* Pods_Viper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCE5446F2A0CDD0440559A9 /* Pods-Viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Viper/Pods-Viper.debug.xcconfig"; sourceTree = "<group>"; };
 		C020121D1E1703DDCB3D77FA /* Pods-ViperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViperTests/Pods-ViperTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,8 +149,8 @@
 		493550541E8BB8F4002C6CA2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				493550281E8B8C71002C6CA2 /* Assets.xcassets */,
 				493550251E8B8C71002C6CA2 /* Main.storyboard */,
+				493550281E8B8C71002C6CA2 /* Assets.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -154,12 +158,11 @@
 		493550551E8BB937002C6CA2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				495070961E8E2F2D0068AECF /* Common */,
 				493550591E8BE364002C6CA2 /* Domain */,
 				493550581E8BE350002C6CA2 /* Api */,
-				493550571E8BB9E0002C6CA2 /* AddScreen */,
+				493550571E8BB9E0002C6CA2 /* DetailScreen */,
 				493550561E8BB992002C6CA2 /* MainScreen */,
-				493550211E8B8C71002C6CA2 /* AppDelegate.swift */,
-				493550461E8B8F4D002C6CA2 /* Routing.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -175,12 +178,12 @@
 			name = MainScreen;
 			sourceTree = "<group>";
 		};
-		493550571E8BB9E0002C6CA2 /* AddScreen */ = {
+		493550571E8BB9E0002C6CA2 /* DetailScreen */ = {
 			isa = PBXGroup;
 			children = (
 				493550501E8BA74C002C6CA2 /* ViewController.swift */,
 			);
-			name = AddScreen;
+			name = DetailScreen;
 			sourceTree = "<group>";
 		};
 		493550581E8BE350002C6CA2 /* Api */ = {
@@ -195,8 +198,8 @@
 		493550591E8BE364002C6CA2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				493550521E8BAB22002C6CA2 /* Database.swift */,
-				493550481E8B8F64002C6CA2 /* Entity.swift */,
+				493550671E8D0489002C6CA2 /* Model */,
+				493550661E8D047A002C6CA2 /* Mappers */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -209,6 +212,33 @@
 				493550611E8C0137002C6CA2 /* Forecast.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		493550661E8D047A002C6CA2 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				493550681E8D04AB002C6CA2 /* ConditionsMapper.swift */,
+				495070941E8E2BE40068AECF /* Mapper.swift */,
+			);
+			name = Mappers;
+			sourceTree = "<group>";
+		};
+		493550671E8D0489002C6CA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				493550481E8B8F64002C6CA2 /* Entity.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		495070961E8E2F2D0068AECF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				493550211E8B8C71002C6CA2 /* AppDelegate.swift */,
+				493550461E8B8F4D002C6CA2 /* Routing.swift */,
+				4935506E1E8D22BA002C6CA2 /* Extensions.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		F541BAF545C853ECE9482BEC /* Pods */ = {
@@ -435,9 +465,11 @@
 				493550621E8C0137002C6CA2 /* Forecast.swift in Sources */,
 				4935504B1E8B8F6F002C6CA2 /* View.swift in Sources */,
 				4935505B1E8BE3AC002C6CA2 /* Request.swift in Sources */,
-				493550531E8BAB22002C6CA2 /* Database.swift in Sources */,
 				493550601E8BFFF3002C6CA2 /* Astronomy.swift in Sources */,
+				495070951E8E2BE40068AECF /* Mapper.swift in Sources */,
+				493550691E8D04AB002C6CA2 /* ConditionsMapper.swift in Sources */,
 				493550221E8B8C71002C6CA2 /* AppDelegate.swift in Sources */,
+				4935506F1E8D22BA002C6CA2 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,36 +1,56 @@
-//
-//  Request.swift
-//  Viper
-//
-//  Created by Miguel Sesma on 29/03/2017.
-//  Copyright © 2017 Sesma. All rights reserved.
-//
-
 import Foundation
-
 import Alamofire
-//https://github.com/Alamofire/Alamofire
+import AlamofireObjectMapper
 
 class Request {
     
-    func getData(){
-        Alamofire.request("https://jsonplaceholder.typicode.com/todos/1").responseJSON { response in
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
+    let WUKEY: String = "93d0c442f87c0b10"
+    var URL: String
+    
+    init(){
+        URL = "http://api.wunderground.com/api/\(WUKEY)/"
+    }
+    
+    func getConditions(country: String, city:String, completionHandler: @escaping (ConditionsData?, Error?) -> ()) {
+        let conditionsUrl = URL + "conditions/q/\(country)/\(city).json"
+        
+        Alamofire.request(conditionsUrl).responseObject { (response: DataResponse<ConditionsData>) in
+            print(response.response ?? "No http response")
+            switch response.result {
+            case .success(let value):
+                completionHandler(value, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
             }
         }
     }
     
-//    let todoEndpoint: String = "https://jsonplaceholder.typicode.com/todos/1"
-//    guard let url = URL(string: todoEndpoint) else {
-//    print("Error: cannot create URL")
-//    return
-//    }
-//    let urlRequest = URLRequest(url: url)
-    
+    func getAstronomy(country: String, city:String, completionHandler: @escaping (Astronomy?, Error?) -> ()) {
+        let conditionsUrl = URL + "conditions/q/\(country)/\(city).json"
+        
+        Alamofire.request(conditionsUrl).responseObject { (response: DataResponse<Astronomy>) in
+            print(response.response ?? "No http response")
+            switch response.result {
+            case .success(let value):
+                completionHandler(value, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+    }
+
+    func getForecast(country: String, city:String, completionHandler: @escaping ([Forecast]?, Error?) -> ()) {
+        let conditionsUrl = URL + "conditions/q/\(country)/\(city).json"
+        
+        Alamofire.request(conditionsUrl).responseArray { (response: DataResponse<[Forecast]>) in
+            print(response.response ?? "No http response")
+            switch response.result {
+            case .success(let value):
+                completionHandler(value, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+    }
+
 }

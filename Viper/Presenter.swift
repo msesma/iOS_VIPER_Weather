@@ -1,14 +1,3 @@
-//
-//  Presenter.swift
-//  Viper
-//
-//  Created by Miguel Sesma on 29/03/2017.
-//  Copyright © 2017 Sesma. All rights reserved.
-//
-
-// https://www.adictosaltrabajo.com/tutoriales/viper/
-
-
 import Foundation
 
 import UIKit
@@ -23,7 +12,7 @@ class Presenter {
     }
     
     func addNewObjectWithData(name:String, surname:String) {
-        interactor?.addNewPersonWithData(name, surname: surname)
+//        interactor?.addNewPersonWithData(name, surname: surname)
     }
     
     func updateObjects(_ objects: [String]) {

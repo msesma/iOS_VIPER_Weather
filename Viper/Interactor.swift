@@ -1,47 +1,21 @@
-//
-//  Interactor.swift
-//  Viper
-//
-//  Created by Miguel Sesma on 29/03/2017.
-//  Copyright © 2017 Sesma. All rights reserved.
-//
-
 import Foundation
 
 class Interactor {
     
     var presenter:Presenter?
-    let dataBase:DataBase?
     let request:Request = Request()
     
     init() {
-        dataBase = DataBase()
-        request.getData()
-    }
-    
-    func addNewPersonWithData(_ name:String, surname:String) {
-        if (name.characters.count > 0 && surname.characters.count > 0) {
-            let persona = Persona()
-            persona.nombre = name
-            persona.apellido = surname
-            
-            if (dataBase?.personas) == nil {
-                dataBase?.personas = [Persona]()
+         request.getConditions(country: "ES", city: "Humera") {conditions, error in
+            if let it = conditions {
+                print(it)
+                let currentWeather = ConditionsMapper().map(input: it)
+                print(currentWeather.condition)
             }
-            dataBase?.personas?.append(persona)
-            
-            updateList()
+            if let it = error {
+                print(it.localizedDescription)
+            }
         }
-    }
-    
-    func updateList() {
-        var arrayPersonas = [String]()
-        for persona in dataBase!.personas! {
-            
-            arrayPersonas.append(persona.nombre! + " " + persona.apellido!)
-        }
-        
-        presenter?.updateObjects(arrayPersonas)
     }
 }
 
