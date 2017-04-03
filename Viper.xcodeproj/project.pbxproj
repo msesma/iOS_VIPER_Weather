@@ -17,7 +17,6 @@
 		493550471E8B8F4D002C6CA2 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550461E8B8F4D002C6CA2 /* Routing.swift */; };
 		493550491E8B8F64002C6CA2 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550481E8B8F64002C6CA2 /* Entity.swift */; };
 		4935504B1E8B8F6F002C6CA2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935504A1E8B8F6F002C6CA2 /* View.swift */; };
-		4935504D1E8B9134002C6CA2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935504C1E8B9133002C6CA2 /* TableViewController.swift */; };
 		493550511E8BA74C002C6CA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550501E8BA74C002C6CA2 /* ViewController.swift */; };
 		4935505B1E8BE3AC002C6CA2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935505A1E8BE3AC002C6CA2 /* Request.swift */; };
 		4935505E1E8BFADD002C6CA2 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935505D1E8BFADD002C6CA2 /* Conditions.swift */; };
@@ -26,6 +25,7 @@
 		493550691E8D04AB002C6CA2 /* ConditionsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550681E8D04AB002C6CA2 /* ConditionsMapper.swift */; };
 		4935506F1E8D22BA002C6CA2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935506E1E8D22BA002C6CA2 /* Extensions.swift */; };
 		495070951E8E2BE40068AECF /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495070941E8E2BE40068AECF /* Mapper.swift */; };
+		495070981E8E4C640068AECF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495070971E8E4C640068AECF /* MainViewController.swift */; };
 		E982FBFBAE29C5207972ACC7 /* Pods_Viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E23A1E86ACB9CFA981EF7B0 /* Pods_Viper.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,6 @@
 		493550461E8B8F4D002C6CA2 /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		493550481E8B8F64002C6CA2 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		4935504A1E8B8F6F002C6CA2 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		4935504C1E8B9133002C6CA2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		493550501E8BA74C002C6CA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4935505A1E8BE3AC002C6CA2 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		4935505D1E8BFADD002C6CA2 /* Conditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		493550681E8D04AB002C6CA2 /* ConditionsMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionsMapper.swift; sourceTree = "<group>"; };
 		4935506E1E8D22BA002C6CA2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		495070941E8E2BE40068AECF /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		495070971E8E4C640068AECF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5E23A1E86ACB9CFA981EF7B0 /* Pods_Viper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCE5446F2A0CDD0440559A9 /* Pods-Viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Viper/Pods-Viper.debug.xcconfig"; sourceTree = "<group>"; };
 		C020121D1E1703DDCB3D77FA /* Pods-ViperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViperTests/Pods-ViperTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,10 +170,10 @@
 		493550561E8BB992002C6CA2 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				4935504C1E8B9133002C6CA2 /* TableViewController.swift */,
 				493550411E8B8D5E002C6CA2 /* Interactor.swift */,
 				493550441E8B8F39002C6CA2 /* Presenter.swift */,
 				4935504A1E8B8F6F002C6CA2 /* View.swift */,
+				495070971E8E4C640068AECF /* MainViewController.swift */,
 			);
 			name = MainScreen;
 			sourceTree = "<group>";
@@ -456,12 +456,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				493550471E8B8F4D002C6CA2 /* Routing.swift in Sources */,
-				4935504D1E8B9134002C6CA2 /* TableViewController.swift in Sources */,
 				4935505E1E8BFADD002C6CA2 /* Conditions.swift in Sources */,
 				493550421E8B8D5E002C6CA2 /* Interactor.swift in Sources */,
 				493550511E8BA74C002C6CA2 /* ViewController.swift in Sources */,
 				493550491E8B8F64002C6CA2 /* Entity.swift in Sources */,
 				493550451E8B8F39002C6CA2 /* Presenter.swift in Sources */,
+				495070981E8E4C640068AECF /* MainViewController.swift in Sources */,
 				493550621E8C0137002C6CA2 /* Forecast.swift in Sources */,
 				4935504B1E8B8F6F002C6CA2 /* View.swift in Sources */,
 				4935505B1E8BE3AC002C6CA2 /* Request.swift in Sources */,

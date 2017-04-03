@@ -11,8 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let routing = Routing()
         
         self.window = UIWindow()
-        let screen:UIScreen = UIScreen.main
-        
+        let screen:UIScreen = UIScreen.main        
         self.window!.frame = screen.bounds
         self.window!.rootViewController = routing.navigationController
         self.window!.makeKeyAndVisible()

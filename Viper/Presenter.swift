@@ -3,23 +3,25 @@ import Foundation
 import UIKit
 
 class Presenter {
-    var view:TableViewController?
+    var view:MainViewController?
     var interactor:Interactor?
     var routing:Routing?
     
-    init() {
-        
+    init() {}
+    
+    func onViewReady() {
+        interactor?.refresh()
     }
     
-    func addNewObjectWithData(name:String, surname:String) {
-//        interactor?.addNewPersonWithData(name, surname: surname)
+    func onConditions(_ conditions: DomWeather) {
+        view?.showConditions(conditions)
+    }
+   
+    func onAstronomy(_ astronomy: DomAstronomy) {
+        view?.showAstronomy(astronomy)
     }
     
-    func updateObjects(_ objects: [String]) {
-        view?.setListWithObjects(objects)
-    }
-    
-    func addNewObject() {
-        routing?.openAddView()
+    func onError(_ error: Error) {
+        view?.showError(error.localizedDescription)
     }
 }

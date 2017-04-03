@@ -1,21 +1,21 @@
 import UIKit
 
-class TableViewController: UITableViewController, viewProtocol{
+class TableViewController: UITableViewController{
 
     var presenter:Presenter?
     var objects:[String]?
 
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let addItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addNewObject))
-        navigationItem.rightBarButtonItem = addItem
-    }
-    
-    func addNewObject() {
-        presenter!.addNewObject()
-    }
-
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        let addItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addNewObject))
+//        navigationItem.rightBarButtonItem = addItem
+//    }
+//    
+//    func addNewObject() {
+////        presenter!.addNewObject()
+//    }
+//
      override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

@@ -9,9 +9,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var surname: UITextField!
 
     @IBAction func add(_ sender: UIButton) {
-        presenter?.addNewObjectWithData(name: self.name.text!, surname: self.surname.text!)
-        
-        self.presentingViewController?.dismiss(animated: true, completion:nil)
+//        presenter?.addNewObjectWithData(name: self.name.text!, surname: self.surname.text!)
+//        
+//        self.presentingViewController?.dismiss(animated: true, completion:nil)
     }
     
     

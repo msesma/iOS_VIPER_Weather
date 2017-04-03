@@ -1,6 +1,11 @@
 import Foundation
 
 protocol viewProtocol {
-    func setListWithObjects(_ objects:[String])
+    
+    func showConditions(_ conditions: DomWeather)
+    
+    func showAstronomy(_ astronomy: DomAstronomy)
+    
+    func showError(_ error: String)
 }
 
