@@ -3,6 +3,7 @@ import UIKit
 class MainViewController: UIViewController, viewProtocol {
     
     var presenter:Presenter?
+    var listVC: ForecastTableViewController?
     
     @IBOutlet weak var city: UITextField!
     
@@ -29,12 +30,21 @@ class MainViewController: UIViewController, viewProtocol {
     func showAstronomy(_ astronomy: DomAstronomy) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
-        dateFormatter.string(from: astronomy.sunrise!)
         let sunrise = dateFormatter.string(from: astronomy.sunrise!)
         let sunset = dateFormatter.string(from: astronomy.sunset!)
         
         daylight.text = "Sunrise: \(sunrise), Sunset: \(sunset)"
     }
-
+    
+    func showForecast(_ forecast: [DomForecast]) {
+        listVC?.showForecast(forecast)
+    }
+    
     func showError(_ error: String) {}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "listSegue" {
+            listVC = segue.destination as? ForecastTableViewController
+        }
+    }
 }

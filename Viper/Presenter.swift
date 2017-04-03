@@ -21,6 +21,10 @@ class Presenter {
         view?.showAstronomy(astronomy)
     }
     
+    func onForecast(_ forecast: [DomForecast]) {
+        view?.showForecast(forecast)
+    }
+    
     func onError(_ error: Error) {
         view?.showError(error.localizedDescription)
     }

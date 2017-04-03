@@ -2,7 +2,7 @@ import Foundation
 import ObjectMapper
 
 class Forecast: Mappable {
-    var hourlyForecast: HourlyForecast?
+    var hourlyForecast: [HourlyForecast]?
     
     required init?(map: Map) {}
     

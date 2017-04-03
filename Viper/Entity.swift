@@ -5,25 +5,13 @@ struct City{
     var countryCode: String = ""
 }
 
-class DomWeather{
-    let precip1hrMetric, temp, feelsLike: Float
-    let condition, iconUrl, iconName: String
-    
-    required init(
-        precip1hrMetric: Float,
-        iconUrl: String,
-        iconName: String ,
-        temp: Float,
-        feelsLike: Float,
-        condition: String
-        ) {
-        self.precip1hrMetric = precip1hrMetric
-        self.iconUrl = iconUrl
-        self.iconName = iconName
-        self.temp = temp
-        self.feelsLike = feelsLike
-        self.condition = condition
-    }
+struct DomWeather{
+    var precip1hrMetric: Float = 0
+    var iconUrl: String = ""
+    var iconName: String = ""
+    var temp: Float = 0
+    var feelsLike: Float = 0
+    var condition: String = ""
 }
 
 struct DomAstronomy{

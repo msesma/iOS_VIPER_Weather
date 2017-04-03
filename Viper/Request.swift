@@ -16,9 +16,9 @@ class Request {
         
         Alamofire.request(conditionsUrl).responseObject { (response: DataResponse<ConditionsData>) in
             print(response.response ?? "No http response")
-            if let JSON = response.result.value?.toJSONString() {
-                print("JSON: \(JSON)")
-            }
+//            if let JSON = response.result.value?.toJSONString() {
+//                print("JSON: \(JSON)")
+//            }
             switch response.result {
             case .success(let value):
                 completionHandler(value, nil)
@@ -33,9 +33,9 @@ class Request {
         
         Alamofire.request(astronomyUrl).responseObject { (response: DataResponse<Astronomy>) in
             print(response.response ?? "No http response")
-            if let JSON = response.result.value?.toJSONString() {
-                print("JSON: \(JSON)")
-            }
+//            if let JSON = response.result.value?.toJSONString() {
+//                print("JSON: \(JSON)")
+//            }
             switch response.result {
             case .success(let value):
                 completionHandler(value, nil)
@@ -45,14 +45,13 @@ class Request {
         }
     }
 
-    func getForecast(country: String, city:String, completionHandler: @escaping ([Forecast]?, Error?) -> ()) {
+    func getForecast(country: String, city:String, completionHandler: @escaping (Forecast?, Error?) -> ()) {
         let forecastUrl = URL + "hourly/q/\(country)/\(city).json"
-        
-        Alamofire.request(forecastUrl).responseArray { (response: DataResponse<[Forecast]>) in
+        Alamofire.request(forecastUrl).responseObject { (response: DataResponse<Forecast>) in
             print(response.response ?? "No http response")
-            if let JSON = response.result.value?.toJSONString() {
-                print("JSON: \(JSON)")
-            }
+//            if let JSON = response.result.value?.toJSONString() {
+//                print("JSON: \(JSON)")
+//            }
             switch response.result {
             case .success(let value):
                 completionHandler(value, nil)

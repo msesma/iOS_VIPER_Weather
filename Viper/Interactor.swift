@@ -10,6 +10,7 @@ class Interactor {
     func refresh() {
         requestConditions()
         requestAstronomy()
+        requestForecast()
     }
     
     private func requestConditions() {
@@ -30,6 +31,19 @@ class Interactor {
             if let it = astronomy {
                 print(it)
                 self.presenter?.onAstronomy(AstronomyMapper().map(input: it))
+            }
+            if let it = error {
+                print(it.localizedDescription)
+                self.presenter?.onError(it)
+            }
+        }
+    }
+    
+    private func requestForecast() {
+        request.getForecast(country: "ES", city: "Humera") {forecast, error in
+            if let it = forecast {
+                print(it)
+                self.presenter?.onForecast(ForecastMapper().map(input: it))
             }
             if let it = error {
                 print(it.localizedDescription)

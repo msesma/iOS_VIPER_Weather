@@ -27,6 +27,9 @@
 		495070951E8E2BE40068AECF /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495070941E8E2BE40068AECF /* Mapper.swift */; };
 		495070981E8E4C640068AECF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495070971E8E4C640068AECF /* MainViewController.swift */; };
 		4950709A1E924B300068AECF /* AstronomyMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495070991E924B300068AECF /* AstronomyMapper.swift */; };
+		4950709C1E92868F0068AECF /* ForecastMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950709B1E92868F0068AECF /* ForecastMapper.swift */; };
+		4950709E1E92965A0068AECF /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950709D1E92965A0068AECF /* ForecastTableViewCell.swift */; };
+		495070A01E929CBB0068AECF /* ForecastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950709F1E929CBB0068AECF /* ForecastTableViewController.swift */; };
 		E982FBFBAE29C5207972ACC7 /* Pods_Viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E23A1E86ACB9CFA981EF7B0 /* Pods_Viper.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,9 @@
 		495070941E8E2BE40068AECF /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		495070971E8E4C640068AECF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		495070991E924B300068AECF /* AstronomyMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronomyMapper.swift; sourceTree = "<group>"; };
+		4950709B1E92868F0068AECF /* ForecastMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastMapper.swift; sourceTree = "<group>"; };
+		4950709D1E92965A0068AECF /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		4950709F1E929CBB0068AECF /* ForecastTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastTableViewController.swift; sourceTree = "<group>"; };
 		5E23A1E86ACB9CFA981EF7B0 /* Pods_Viper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCE5446F2A0CDD0440559A9 /* Pods-Viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Viper/Pods-Viper.debug.xcconfig"; sourceTree = "<group>"; };
 		C020121D1E1703DDCB3D77FA /* Pods-ViperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViperTests/Pods-ViperTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,10 +178,12 @@
 		493550561E8BB992002C6CA2 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4950709F1E929CBB0068AECF /* ForecastTableViewController.swift */,
+				4950709D1E92965A0068AECF /* ForecastTableViewCell.swift */,
 				493550411E8B8D5E002C6CA2 /* Interactor.swift */,
 				493550441E8B8F39002C6CA2 /* Presenter.swift */,
-				4935504A1E8B8F6F002C6CA2 /* View.swift */,
 				495070971E8E4C640068AECF /* MainViewController.swift */,
+				4935504A1E8B8F6F002C6CA2 /* View.swift */,
 			);
 			name = MainScreen;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 			children = (
 				493550681E8D04AB002C6CA2 /* ConditionsMapper.swift */,
 				495070991E924B300068AECF /* AstronomyMapper.swift */,
+				4950709B1E92868F0068AECF /* ForecastMapper.swift */,
 				495070941E8E2BE40068AECF /* Mapper.swift */,
 			);
 			name = Mappers;
@@ -464,13 +473,16 @@
 				493550421E8B8D5E002C6CA2 /* Interactor.swift in Sources */,
 				493550511E8BA74C002C6CA2 /* ViewController.swift in Sources */,
 				493550491E8B8F64002C6CA2 /* Entity.swift in Sources */,
+				4950709E1E92965A0068AECF /* ForecastTableViewCell.swift in Sources */,
 				493550451E8B8F39002C6CA2 /* Presenter.swift in Sources */,
 				495070981E8E4C640068AECF /* MainViewController.swift in Sources */,
 				493550621E8C0137002C6CA2 /* Forecast.swift in Sources */,
 				4935504B1E8B8F6F002C6CA2 /* View.swift in Sources */,
 				4935505B1E8BE3AC002C6CA2 /* Request.swift in Sources */,
 				493550601E8BFFF3002C6CA2 /* Astronomy.swift in Sources */,
+				4950709C1E92868F0068AECF /* ForecastMapper.swift in Sources */,
 				495070951E8E2BE40068AECF /* Mapper.swift in Sources */,
+				495070A01E929CBB0068AECF /* ForecastTableViewController.swift in Sources */,
 				493550691E8D04AB002C6CA2 /* ConditionsMapper.swift in Sources */,
 				493550221E8B8C71002C6CA2 /* AppDelegate.swift in Sources */,
 				4935506F1E8D22BA002C6CA2 /* Extensions.swift in Sources */,
