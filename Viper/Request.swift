@@ -16,6 +16,9 @@ class Request {
         
         Alamofire.request(conditionsUrl).responseObject { (response: DataResponse<ConditionsData>) in
             print(response.response ?? "No http response")
+            if let JSON = response.result.value?.toJSONString() {
+                print("JSON: \(JSON)")
+            }
             switch response.result {
             case .success(let value):
                 completionHandler(value, nil)
@@ -26,10 +29,13 @@ class Request {
     }
     
     func getAstronomy(country: String, city:String, completionHandler: @escaping (Astronomy?, Error?) -> ()) {
-        let conditionsUrl = URL + "conditions/q/\(country)/\(city).json"
+        let astronomyUrl = URL + "astronomy/q/\(country)/\(city).json"
         
-        Alamofire.request(conditionsUrl).responseObject { (response: DataResponse<Astronomy>) in
+        Alamofire.request(astronomyUrl).responseObject { (response: DataResponse<Astronomy>) in
             print(response.response ?? "No http response")
+            if let JSON = response.result.value?.toJSONString() {
+                print("JSON: \(JSON)")
+            }
             switch response.result {
             case .success(let value):
                 completionHandler(value, nil)
@@ -40,10 +46,13 @@ class Request {
     }
 
     func getForecast(country: String, city:String, completionHandler: @escaping ([Forecast]?, Error?) -> ()) {
-        let conditionsUrl = URL + "conditions/q/\(country)/\(city).json"
+        let forecastUrl = URL + "hourly/q/\(country)/\(city).json"
         
-        Alamofire.request(conditionsUrl).responseArray { (response: DataResponse<[Forecast]>) in
+        Alamofire.request(forecastUrl).responseArray { (response: DataResponse<[Forecast]>) in
             print(response.response ?? "No http response")
+            if let JSON = response.result.value?.toJSONString() {
+                print("JSON: \(JSON)")
+            }
             switch response.result {
             case .success(let value):
                 completionHandler(value, nil)

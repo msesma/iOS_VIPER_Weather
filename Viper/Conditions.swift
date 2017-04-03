@@ -16,13 +16,13 @@ class CurrentObservation: Mappable {
     var iconUrl: String?
     var iconName: String?
     var tempC: Float?
-    var feelsLikeC: Float?
+    var feelsLikeC: String?
     var condition: String?
     
     required init?(map: Map) {}
     
     func mapping(map: Map) {
-        precip1hrMetric        <- map["current_observation"]
+        precip1hrMetric        <- map["precip_1hr_metric"]
         iconUrl                <- map["icon_url"]
         iconName               <- map["icon"]
         tempC                  <- map["temp_c"]

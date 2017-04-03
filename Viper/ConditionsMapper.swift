@@ -8,7 +8,7 @@ class ConditionsMapper : Mapper{
             iconUrl :input.currenObservation?.iconUrl ?? "",
             iconName : input.currenObservation?.iconName ?? "",
             temp : input.currenObservation?.tempC ?? 0,
-            feelsLike : input.currenObservation?.feelsLikeC ?? 0,
+            feelsLike : input.currenObservation?.feelsLikeC?.floatValue ?? 0,
             condition : input.currenObservation?.condition ?? ""
         )
     }
