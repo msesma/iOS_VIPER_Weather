@@ -13,3 +13,9 @@ extension String {
         return Double((self as NSString).doubleValue)
     }
 }
+
+extension Double {
+    var toString: String {
+        return String(format:"%f", self)
+    }
+}

@@ -1,32 +1,24 @@
 import Foundation
 import ObjectMapper
 
-class ConditionsData: Mappable {
-    var currenObservation: CurrentObservation?
+class GeoLookUp: Mappable {
+    var location: Location?
     
     required init?(map: Map) {}
     
     func mapping(map: Map) {
-        currenObservation      <- map["current_observation"]
+        location        <- map["location"]
     }
 }
 
-class CurrentObservation: Mappable {
-    var precip1hrMetric: String?
-    var iconUrl: String?
-    var iconName: String?
-    var tempC: Float?
-    var feelsLikeC: String?
-    var condition: String?
+class Location: Mappable {
+    var city: String?
+    var country: String?
     
     required init?(map: Map) {}
     
     func mapping(map: Map) {
-        precip1hrMetric        <- map["precip_1hr_metric"]
-        iconUrl                <- map["icon_url"]
-        iconName               <- map["icon"]
-        tempC                  <- map["temp_c"]
-        feelsLikeC             <- map["feelslike_c"]
-        condition              <- map["weather"]
+        city            <- map["city"]
+        country         <- map["country_iso3166"]
     }
 }

@@ -25,6 +25,10 @@ class Presenter {
         view?.showForecast(forecast)
     }
     
+    func onCity(_ city: String) {
+        view?.showCity(city)
+    }
+    
     func onError(_ error: Error) {
         view?.showError(error.localizedDescription)
     }

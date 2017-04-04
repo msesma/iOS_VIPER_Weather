@@ -47,11 +47,29 @@ class Request {
 
     func getForecast(country: String, city:String, completionHandler: @escaping (Forecast?, Error?) -> ()) {
         let forecastUrl = URL + "hourly/q/\(country)/\(city).json"
+        
         Alamofire.request(forecastUrl).responseObject { (response: DataResponse<Forecast>) in
             print(response.response ?? "No http response")
 //            if let JSON = response.result.value?.toJSONString() {
 //                print("JSON: \(JSON)")
 //            }
+            switch response.result {
+            case .success(let value):
+                completionHandler(value, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+    }
+    
+    func getCity(latitude:String, longitude: String, completionHandler: @escaping (GeoLookUp?, Error?) -> ()) {
+        let citytUrl = URL + "geolookup/q/\(latitude),\(longitude).json"
+        
+        Alamofire.request(citytUrl).responseObject { (response: DataResponse<GeoLookUp>) in
+            print(response.response ?? "No http response")
+            if let JSON = response.result.value?.toJSONString() {
+                print("JSON: \(JSON)")
+            }
             switch response.result {
             case .success(let value):
                 completionHandler(value, nil)

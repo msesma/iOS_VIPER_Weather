@@ -24,6 +24,9 @@
 		493550621E8C0137002C6CA2 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550611E8C0137002C6CA2 /* Forecast.swift */; };
 		493550691E8D04AB002C6CA2 /* ConditionsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493550681E8D04AB002C6CA2 /* ConditionsMapper.swift */; };
 		4935506F1E8D22BA002C6CA2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935506E1E8D22BA002C6CA2 /* Extensions.swift */; };
+		4940A5B41E93829300F7654A /* LocationanFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4940A5B31E93829300F7654A /* LocationanFetcher.swift */; };
+		4940A5B81E93BC9300F7654A /* GeoLookUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4940A5B71E93BC9300F7654A /* GeoLookUp.swift */; };
+		4940A5BA1E93BDAF00F7654A /* CityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4940A5B91E93BDAF00F7654A /* CityMapper.swift */; };
 		495070951E8E2BE40068AECF /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495070941E8E2BE40068AECF /* Mapper.swift */; };
 		495070981E8E4C640068AECF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495070971E8E4C640068AECF /* MainViewController.swift */; };
 		4950709A1E924B300068AECF /* AstronomyMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495070991E924B300068AECF /* AstronomyMapper.swift */; };
@@ -65,6 +68,9 @@
 		493550611E8C0137002C6CA2 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		493550681E8D04AB002C6CA2 /* ConditionsMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionsMapper.swift; sourceTree = "<group>"; };
 		4935506E1E8D22BA002C6CA2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4940A5B31E93829300F7654A /* LocationanFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationanFetcher.swift; sourceTree = "<group>"; };
+		4940A5B71E93BC9300F7654A /* GeoLookUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLookUp.swift; sourceTree = "<group>"; };
+		4940A5B91E93BDAF00F7654A /* CityMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityMapper.swift; sourceTree = "<group>"; };
 		495070941E8E2BE40068AECF /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		495070971E8E4C640068AECF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		495070991E924B300068AECF /* AstronomyMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronomyMapper.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 		493550551E8BB937002C6CA2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4940A5B21E93826D00F7654A /* Location */,
 				495070961E8E2F2D0068AECF /* Common */,
 				493550591E8BE364002C6CA2 /* Domain */,
 				493550581E8BE350002C6CA2 /* Api */,
@@ -218,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				4935505D1E8BFADD002C6CA2 /* Conditions.swift */,
+				4940A5B71E93BC9300F7654A /* GeoLookUp.swift */,
 				4935505F1E8BFFF3002C6CA2 /* Astronomy.swift */,
 				493550611E8C0137002C6CA2 /* Forecast.swift */,
 			);
@@ -229,6 +237,7 @@
 			children = (
 				493550681E8D04AB002C6CA2 /* ConditionsMapper.swift */,
 				495070991E924B300068AECF /* AstronomyMapper.swift */,
+				4940A5B91E93BDAF00F7654A /* CityMapper.swift */,
 				4950709B1E92868F0068AECF /* ForecastMapper.swift */,
 				495070941E8E2BE40068AECF /* Mapper.swift */,
 			);
@@ -241,6 +250,14 @@
 				493550481E8B8F64002C6CA2 /* Entity.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4940A5B21E93826D00F7654A /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				4940A5B31E93829300F7654A /* LocationanFetcher.swift */,
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 		495070961E8E2F2D0068AECF /* Common */ = {
@@ -479,11 +496,14 @@
 				493550621E8C0137002C6CA2 /* Forecast.swift in Sources */,
 				4935504B1E8B8F6F002C6CA2 /* View.swift in Sources */,
 				4935505B1E8BE3AC002C6CA2 /* Request.swift in Sources */,
+				4940A5B41E93829300F7654A /* LocationanFetcher.swift in Sources */,
 				493550601E8BFFF3002C6CA2 /* Astronomy.swift in Sources */,
+				4940A5B81E93BC9300F7654A /* GeoLookUp.swift in Sources */,
 				4950709C1E92868F0068AECF /* ForecastMapper.swift in Sources */,
 				495070951E8E2BE40068AECF /* Mapper.swift in Sources */,
 				495070A01E929CBB0068AECF /* ForecastTableViewController.swift in Sources */,
 				493550691E8D04AB002C6CA2 /* ConditionsMapper.swift in Sources */,
+				4940A5BA1E93BDAF00F7654A /* CityMapper.swift in Sources */,
 				493550221E8B8C71002C6CA2 /* AppDelegate.swift in Sources */,
 				4935506F1E8D22BA002C6CA2 /* Extensions.swift in Sources */,
 			);

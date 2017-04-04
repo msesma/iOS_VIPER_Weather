@@ -40,6 +40,10 @@ class MainViewController: UIViewController, viewProtocol {
         listVC?.showForecast(forecast)
     }
     
+    func showCity(_ city: String) {
+        self.city.text = city
+    }
+    
     func showError(_ error: String) {}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
