@@ -9,6 +9,11 @@ class ForecastTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.refreshControl?.addTarget(self, action: #selector(handleRefresh(_:)), for: UIControlEvents.valueChanged)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
