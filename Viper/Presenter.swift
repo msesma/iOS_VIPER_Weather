@@ -32,5 +32,9 @@ class Presenter : viewOutProtocol {
     func onError(_ error: Error) {
         view?.showError(error.localizedDescription)
     }
+    
+    func onClick(forecastRow: DomForecast) {
+        routing?.openDetailView(forecast: forecastRow)
+    }
 
 }

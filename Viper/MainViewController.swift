@@ -5,8 +5,6 @@ class MainViewController: UIViewController, viewProtocol {
     var presenter: Presenter?
     var listVC: ForecastTableViewController?
     
-    @IBOutlet weak var city: UITextField!
-    
     @IBOutlet weak var condition: UITextField!
     
     @IBOutlet weak var temp: UITextField!
@@ -41,7 +39,7 @@ class MainViewController: UIViewController, viewProtocol {
     }
     
     func showCity(_ city: String) {
-        self.city.text = city
+        title = city
     }
     
     func showError(_ error: String) {}

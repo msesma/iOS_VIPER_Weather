@@ -15,5 +15,7 @@ protocol viewProtocol {
 
 protocol viewOutProtocol {
     func onRefresh()
+    
+    func onClick(forecastRow: DomForecast)
 }
 

@@ -14,6 +14,8 @@ class ForecastTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.refreshControl?.addTarget(self, action: #selector(ForecastTableViewController.refresh), for: UIControlEvents.valueChanged)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,6 +45,11 @@ class ForecastTableViewController: UITableViewController {
         cell.icon.image = UIImage(data: data! as Data)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter?.onClick(forecastRow: (forecast?[indexPath.row])!)
     }
     
     func refresh() {

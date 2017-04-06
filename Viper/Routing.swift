@@ -24,10 +24,11 @@ class Routing {
         presenter.onRefresh()
     }
     
-    func openAddView() {
+    func openDetailView(forecast: DomForecast) {
         let detailVC:ViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        detailVC.presenter = presenter
-        
-        mainVC.present(detailVC, animated: true, completion: nil)
+        let navContrl = UINavigationController(rootViewController: detailVC)
+
+        detailVC.forecast = forecast
+        mainVC.present(navContrl, animated: true, completion: nil)
     }
 }
