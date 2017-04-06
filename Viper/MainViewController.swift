@@ -2,7 +2,7 @@ import UIKit
 
 class MainViewController: UIViewController, viewProtocol {
     
-    var presenter:Presenter?
+    var presenter: Presenter?
     var listVC: ForecastTableViewController?
     
     @IBOutlet weak var city: UITextField!
@@ -49,6 +49,7 @@ class MainViewController: UIViewController, viewProtocol {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "listSegue" {
             listVC = segue.destination as? ForecastTableViewController
+            listVC?.presenter = presenter
         }
     }
 }

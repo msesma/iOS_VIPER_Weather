@@ -21,7 +21,7 @@ class Routing {
         
         navigationController = UINavigationController(rootViewController: mainVC)
         
-        presenter.onViewReady()
+        presenter.onRefresh()
     }
     
     func openAddView() {

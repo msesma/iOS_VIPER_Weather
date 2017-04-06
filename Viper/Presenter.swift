@@ -2,14 +2,14 @@ import Foundation
 
 import UIKit
 
-class Presenter {
+class Presenter : viewOutProtocol {
     var view:MainViewController?
     var interactor:Interactor?
     var routing:Routing?
     
     init() {}
     
-    func onViewReady() {
+    func onRefresh(){
         interactor?.refresh()
     }
     
@@ -32,4 +32,5 @@ class Presenter {
     func onError(_ error: Error) {
         view?.showError(error.localizedDescription)
     }
+
 }

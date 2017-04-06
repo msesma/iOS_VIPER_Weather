@@ -13,3 +13,7 @@ protocol viewProtocol {
     func showError(_ error: String)
 }
 
+protocol viewOutProtocol {
+    func onRefresh()
+}
+

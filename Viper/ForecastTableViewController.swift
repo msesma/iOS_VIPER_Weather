@@ -2,16 +2,18 @@ import UIKit
 
 class ForecastTableViewController: UITableViewController {
 
+    var presenter: Presenter?
     var forecast: [DomForecast]?
     
     func showForecast(_ forecast: [DomForecast]) {
         self.forecast = forecast
         tableView.reloadData()
+        refreshControl?.endRefreshing()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.refreshControl?.addTarget(self, action: #selector(handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        self.refreshControl?.addTarget(self, action: #selector(ForecastTableViewController.refresh), for: UIControlEvents.valueChanged)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,5 +44,9 @@ class ForecastTableViewController: UITableViewController {
         
         return cell
     }
-
+    
+    func refresh() {
+        refreshControl?.beginRefreshing()
+        presenter?.onRefresh()
+    }
 }
