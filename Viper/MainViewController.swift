@@ -15,6 +15,8 @@ class MainViewController: UIViewController, viewProtocol {
     
     @IBOutlet weak var icon: UIImageView!
     
+    @IBOutlet weak var canvas: GraphView!
+    
     func showConditions(_ conditions: DomWeather) {
         condition.text = conditions.condition
         temp.text = "\(conditions.temp) ºC"
@@ -36,6 +38,8 @@ class MainViewController: UIViewController, viewProtocol {
     
     func showForecast(_ forecast: [DomForecast]) {
         listVC?.showForecast(forecast)
+        canvas.forecast = forecast
+        canvas.setNeedsDisplay()
     }
     
     func showCity(_ city: String) {
@@ -50,4 +54,7 @@ class MainViewController: UIViewController, viewProtocol {
             listVC?.presenter = presenter
         }
     }
+
 }
+
+

@@ -63,11 +63,11 @@ class Cache {
     var forecast: [DomForecast]? {
         get {
             let timedOut = (forecastTimestamp < time - 5 * 60 * 60)
-            print("GET forecast timed out \(timedOut), previous value = \(String(describing: forecastField))")
+            print("GET forecast timed out \(timedOut)")
             return !timedOut ? forecastField : nil
         }
         set {
-            print("SET forecast \(String(describing: newValue)), previous value = \(String(describing: forecastField))")
+            print("SET forecast")
             forecastTimestamp = time
             forecastField = newValue
         }
