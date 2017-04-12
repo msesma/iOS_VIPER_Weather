@@ -32,6 +32,8 @@ class MainViewController: UIViewController, viewProtocol {
         dateFormatter.dateFormat = "HH:mm"
         let sunrise = dateFormatter.string(from: astronomy.sunrise!)
         let sunset = dateFormatter.string(from: astronomy.sunset!)
+        canvas.astronomy = astronomy
+        canvas.setNeedsDisplay()
         
         daylight.text = "Sunrise: \(sunrise), Sunset: \(sunset)"
     }
