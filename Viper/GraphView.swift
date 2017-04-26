@@ -31,8 +31,8 @@ class GraphView: UIView {
     }
     
     private func drawTemp(){
-        let min: CGFloat = temps.min()!
-        let max: CGFloat = temps.max()!
+        let min: CGFloat = temps.min() ?? 0
+        let max: CGFloat = temps.max() ?? 0
         let hours = temps.count
         let width = CGFloat(frame.size.width)
         let height = CGFloat(frame.size.height)
